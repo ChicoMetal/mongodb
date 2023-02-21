@@ -1,0 +1,4 @@
+
+use("mercer-sync")
+
+db.Applications.find({clientId: "Cli01"})
