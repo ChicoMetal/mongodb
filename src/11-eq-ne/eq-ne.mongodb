@@ -1,0 +1,12 @@
+use("platzi_store")
+
+// $eq
+//db.inventory.find({ qty: {$eq: 20} })
+//is equal to
+//db.inventory.find({ qty:  20 })
+
+// searching in a sub document
+//db.inventory.find({ "item.code": "123"})
+
+// $ne
+db.inventory.find({ "item.code": { $ne: "123"}})

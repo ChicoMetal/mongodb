@@ -1,0 +1,63 @@
+use("platzi_store")
+
+//add item to a list
+// db.inventory.update(
+//   {_id: 4},
+//   {
+//     $push: {
+//       tags: "headphone"
+//     }
+//   }
+// )
+
+// delete element from a list
+// db.inventory.update(
+//   {_id: 4},
+//   {
+//     $pull: {
+//       tags: "headphone"
+//     }
+//   }
+// )
+
+//add item to a list in many rows
+// db.inventory.updateMany(
+//   {},
+//   {
+//     $push: {
+//       tags: "deleteB"
+//     }
+//   }
+// )
+
+//add several items to a list in many rows
+// db.inventory.updateMany(
+//   {},
+//   {
+//     $push: {
+
+//     }
+//   }
+// )
+
+// delete element from a list in many rows
+// db.inventory.updateMany(
+//   {},
+//   {
+//     $pull: {
+//       tags: "book"
+//     }
+//   }
+// )
+
+// delete several elements from a list in many rows
+// db.inventory.updateMany(
+//   {},
+//   {
+//     $pull: {
+//       tags: {
+//         $in: ["delete", "deleteB"]
+//       }
+//     }
+//   }
+// )

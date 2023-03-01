@@ -1,0 +1,35 @@
+use("sample_training")
+
+// increment value with filtering
+// db.zips.updateMany(
+//   {city: "CLEVELAND"},
+//   {
+//     $inc: {
+//       pop: 1000
+//     }
+//   }
+// )
+
+// renaming attribute
+// db.zips.updateMany(
+//   {
+//     city: "CLEVELAND"
+//   },
+//   {
+//     $rename: {
+//       attribute: "myName"
+//     }
+//   }
+// )
+
+//delete property
+db.zips.updateMany(
+  {
+    city: "CLEVELAND"
+  },
+  {
+    $unset: {
+      myName: ""
+    }
+  }
+)

@@ -1,0 +1,36 @@
+use("platzi_store")
+
+// create new row
+// db.iot.insertOne({
+//   sensor: "A001",
+//   date: "2023-01-22",
+//   readings: [1212]
+// })
+
+//delete last element from a list in a row
+// db.iot.updateOne(
+//   {
+//     _id: ObjectId("63f6deb2e4a38e79cd85792a")
+//   },
+//   {
+//     $pop: {
+//       readings: 1
+//     }
+//   }
+// )
+
+// create new element or update if existed an element with the same filtering
+db.iot.updateOne(
+  {
+    sensor: "A001",
+    date: "2023-01-24"
+  },
+  {
+    $push: {
+      readings: 1717
+    }
+  },
+  {
+    upsert: true
+  }
+)
