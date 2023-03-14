@@ -1,0 +1,62 @@
+use("sample_training")
+
+// $and
+/*db.inspections.find(
+  {
+    $and: [
+      {sector: 'Tax Preparers - 891'},
+      {result: 'Unable to Locate'}
+    ]
+  }
+)*/
+
+// $or
+/*db.inspections.find(
+  {
+    $or: [
+      {sector: 'Tax Preparers - 891'},
+      {result: 'Unable to Locate'}
+    ]
+  }
+).count()*/
+
+// $nor
+/*db.inspections.find(
+  {
+    $nor: [
+      {sector: 'Tax Preparers - 891'},
+      {result: 'Unable to Locate'}
+    ]
+  }
+).count()*/
+
+// $nor
+/*db.inspections.find(
+  {
+    $nor: [
+      {sector: 'Tax Preparers - 891'},
+      {result: 'Unable to Locate'},
+      {result: 'Violation Issued'}
+    ]
+  },
+  // projection
+  {
+    result: 1,
+    _id: 0
+  }
+);*/
+
+// $not
+db.inspections.find(
+  {
+    result: { $not: { $regex: /No violation Issued/i }}
+  },
+  // projection
+  {
+    result: 1,
+    _id: 0
+  }
+);
+
+
+
