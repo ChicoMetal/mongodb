@@ -1,0 +1,24 @@
+use("sample_training")
+
+
+// db.trips.findOne(
+//   {'start station location.type': 'Point'}
+// )
+
+// find in the first position of a list
+// db.companies.find({
+//   'relationships.0.person.first_name': 'Mark'
+// },
+// {
+//   name: 1, relationships: 1
+// });
+
+// look for elements which containt a value in an object in a list
+db.companies.find({
+  relationships: {
+    $elemMatch: {'person.first_name': 'Mark'}
+  }
+},
+{
+  name: 1, relationships: 1
+});
